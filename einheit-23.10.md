@@ -131,8 +131,65 @@ Bevor wir mit dem programmieren starteten, machten wir uns Gedanken zu dem Code 
 
 ```mermaid
 graph TD;
-    Wort SOS-->Buchstabe S;
-    Wort SOS-->Buchstabe O;
-    Buchstabe S-->Punkt;
-    Buchstabe O-->Strich;
+    Wort-SOS-->Buchstabe-S;
+    Wort-SOS-->Buchstabe-O;
+    Buchstabe-S-->Punkt;
+    Buchstabe-O-->Strich;
+```
+
+Anschließend programmierten wir unsere eigene Libary `morsen.h`:
+
+```c++
+// Libary morsen.h
+
+#include <Arduino.h>
+
+void morsenPunkt(int port) {
+    digitalWrite(port, HIGH);
+    delay(500);
+    digitalWrite(port, LOW);
+    delay(250);
+}
+
+void morsenStrich(int port) {
+    digitalWrite(port, HIGH);
+    delay(1500);
+    digitalWrite(port, LOW);
+    delay(250);
+}
+
+void morsenCharacterS(int port) {
+    for (int i = 0; i < 3; i++) {
+        morsenPunkt(port);
+    }
+}
+
+void morsenCharacterO(int port) {
+    for (int i = 0; i < 3; i++) {
+        morsenStrich(port);
+    }
+}
+```
+
+Welche wir dann im Main-File `main.cpp` aufrufen konnten:
+
+```c++
+#include <Arduino.h>
+#include <morsen.h>
+
+#define GREEN_BULB 25
+
+void setup()
+{
+  pinMode(GREEN_BULB, OUTPUT);
+}
+
+void loop()
+{
+  morsenCharacterS(GREEN_BULB);
+  morsenCharacterO(GREEN_BULB);
+  morsenCharacterS(GREEN_BULB);
+
+  delay(5000);
+}
 ```
