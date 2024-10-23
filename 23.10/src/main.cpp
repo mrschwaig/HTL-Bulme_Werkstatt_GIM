@@ -7,7 +7,19 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(GREEN_BULB, HIGH);
-  delay(50);
-  digitalWrite(GREEN_BULB, LOW);
+  for (int i = 1000; i > 0; i--) {
+    digitalWrite(GREEN_BULB, HIGH);
+    delayMicroseconds(i);
+    digitalWrite(GREEN_BULB, LOW);
+    delayMicroseconds(1000 - i);
+  }
+
+  delay(1000);
+
+  for (int i = 1000; i > 0; i--) {
+          digitalWrite(GREEN_BULB, LOW);
+          delayMicroseconds(i);
+          digitalWrite(GREEN_BULB, HIGH);
+          delayMicroseconds(1000 - i);
+    }
 }
