@@ -4,7 +4,7 @@
 |---------|-----------------------------------|
 | Einheit | `23.10` |
 | Inhaltsübersicht | Ampellicht mit ESP32 steuern; Dimmen und Morsen einer Lampe via ESP32 |
-| Stunden (Einheiten) | `7` |,
+| Stunden (Einheiten) | `7` |
 | Fachlehrer | `Martin GIMPL` |
 | Werkstätte | `EMC` |
 
