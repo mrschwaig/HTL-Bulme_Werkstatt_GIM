@@ -3,7 +3,7 @@
     "honkit": "^6.0.2"
   },
   "dependencies": {
-    "gitbook-plugin-mermaid-gb3": "^2.1.0",
+    "honkit-plugin-mermaid-md-adoc": "^0.0.8",
     "punycode": "^2.3.1"
   }
 }
