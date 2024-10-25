@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "honkit": "^6.0.2"
-  },
-  "dependencies": {
-    "punycode": "^2.3.1"
-  }
-}
