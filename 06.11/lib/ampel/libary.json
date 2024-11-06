@@ -1,0 +1,9 @@
+{
+        "name": "Ampel",
+        "version": "1.0.0",
+        "files": [
+            "src/ampel.cpp",
+            "src/ampel.h",
+            "README"
+        ]
+    }
