@@ -1,4 +1,3 @@
 #include <Arduino.h>
 
-void ampelphaseGruen(int portGruen, int portRot, int portGelb);
-void ampelphaseRot(int portGruen, int portRot, int portGelb);
+void trafficlightsTask(int portGreen, int portRed, int portOrange);
